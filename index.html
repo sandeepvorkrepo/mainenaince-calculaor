@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance Calories Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>⚡ Maintenance Calories Calculator</h1>
+
+        <div class="card">
+            <form id="calorie-form">
+                <div class="input-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="e.g. 70" />
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" placeholder="e.g. 175" />
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age (years):</label>
+                    <input type="number" id="age" placeholder="e.g. 25" />
+                </div>
+
+                <div class="input-group">
+                    <label>Sex:</label>
+                    <label><input type="radio" name="sex" value="male" checked /> Male</label>
+                    <label><input type="radio" name="sex" value="female" /> Female</label>
+                </div>
+
+                <div class="input-group">
+                    <label for="activity">Activity Level:</label>
+                    <select id="activity">
+                        <option value="1.2">Sedentary (little or no exercise)</option>
+                        <option value="1.375">Light (1-3 days/week)</option>
+                        <option value="1.55">Moderate (3-5 days/week)</option>
+                        <option value="1.725">Active (6-7 days/week)</option>
+                        <option value="1.9">Very Active (intense training)</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="calc">Calculate</button>
+                    <button type="button" id="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card results" id="results" style="display:none;">
+            <h2>Results</h2>
+            <p><strong>BMR:</strong> <span id="bmr">—</span> kcal/day</p>
+            <p><strong>Maintenance Calories:</strong> <span id="maintenance">—</span> kcal/day</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
